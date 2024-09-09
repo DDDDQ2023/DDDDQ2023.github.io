@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DDDQ's home</title>
+    <style>
+        /* Reset margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1e5e4; /* Very light greyish blue from the color palette */
+            margin: 0;
+            padding-bottom: 100px; /* Prevent content overlap with footer */
+        }
+
+        header {
+            background-color: #7e97ad; /* Soft desaturated blue */
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            font-size: 2.5em;
+            border-bottom: 5px solid #99a5bf; /* Softer blue for the border */
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #99a5bf; /* Light blue-grey for nav */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        article {
+            background-color: #d6c7d9; /* Light lavender grey for the articles */
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #adb1b4; /* Muted greyish color for the border */
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px; /* Extra space for negative space */
+        }
+
+        article:hover {
+            transform: scale(1.05);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #7e97ad; /* Same soft blue as header */
+            margin-bottom: 10px;
+            border-bottom: 2px solid #99a5bf; /* Matching the nav */
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #adb1b4; /* Muted greyish tone for subheadings */
+            margin-bottom: 15px;
+        }
+
+        /* Paragraph text with deep blue */
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #2e4a62; /* Deep blue for paragraph text */
+            margin-bottom: 20px;
+        }
+
+        /* Emphasizing important text with bold and dark green for emphasis */
+        p strong {
+            font-weight: bold;
+            color: #3b706a; /* Dark green for emphasis */
+        }
+
+        footer {
+            background-color: #7e97ad; /* Same blue as header */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed; /* Ensure footer stays at the bottom */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* List experiment inside semantic elements */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #7e97ad; /* Same as headings for consistency */
+        }
+
+        /* CSS animation for links */
+        nav a:hover {
+            color: #3b706a; /* Change to dark green on hover */
+            transition: color 0.4s ease-in-out;
+        }
+
+        /* Additional space inside divs */
+        .extra-space {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Welcome to DDDQ's home
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section>
+        <!-- Each part uses the same background color for consistency -->
+        <article>
+            <h2>My Hobbies</h2>
+            <h3>Passion for Piano and Sports</h3>
+            <p><strong>Piano</strong> has always been my primary passion. Playing the piano allows me to express myself creatively and find a sense of peace. <strong>Classical music</strong>, in particular, has captured my heart. I also love <strong>sports</strong>, particularly <strong>running</strong> and <strong>swimming</strong>.</p>
+        </article>
+
+        <article>
+            <h2>My Major</h2>
+            <h3>Intersection of Journalism, Communication, and Behavioral Studies</h3>
+            <p>In my academic journey, my primary focus lies in <strong>journalism</strong> and <strong>communication studies</strong>, exploring how <strong>media influences societal narratives</strong>. I am particularly interested in understanding the ways media shapes <strong>public opinion</strong>.</p>
+        </article>
+
+        <article>
+            <h2>My Interests</h2>
+            <h3>Love for Wilderness and the Freedom of Nature</h3>
+            <p>My primary interest lies in exploring the <strong>wilderness</strong>. I find immense joy and tranquility in vast, untouched landscapes, where I can <strong>disconnect from the chaos</strong> of everyday life. This connection to <strong>nature</strong> feeds my soul.</p>
+        </article>
+    </section>
+
+    <footer>
+        &copy; 2024 COMM 636 by xyq
+    </footer>
+
+</body>
+</html>
