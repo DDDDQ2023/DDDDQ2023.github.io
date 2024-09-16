@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2ff;
+    color: #003366;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 51, 102, 0.3);
+    position: relative;
+}
+
+h1 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+p {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.campus-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 51, 102, 0.2);
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #00509e;
+}
+
+.info {
+    text-align: center;
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: #00509e;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #00509e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+ul li a:hover {
+    background-color: #003366;
+}
+
+.explore {
+    text-align: center;
+}
+
+.danmaku-container {
+    position: relative;
+    height: 100px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.danmaku {
+    position: absolute;
+    animation: float 8s linear infinite;
+    font-size: 1.5em;
+    color: #00509e;
+    cursor: pointer;
+}
+
+.danmaku:hover {
+    color: #003366;
+}
+
+.liked {
+    font-size: 2em;
+    color: #ff4500;
+    transform: scale(1.5);
+    transition: transform 0.5s;
+}
+
+.like {
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    font-size: 2em;
+    color: #ff4500;
+    opacity: 0;
+    animation: showLike 0.5s forwards;
+}
+
+@keyframes float {
+    0% { top: 100px; left: -100px; }
+    100% { top: -50px; left: 100vw; }
+}
+
+@keyframes showLike {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(-20px); }
+}

@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d0e8f2; /* 浅蓝色背景 */
+    color: #00274d; /* 深蓝色文字 */
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* 左对齐内容 */
+    align-items: center; /* 让左右部分垂直居中 */
+    background-color: #e1f2ff; /* 浅蓝色背景 */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 39, 77, 0.3);
+    padding: 20px;
+}
+
+/* 左边部分：标题和问题样式 */
+.left-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: flex-start;
+    text-align: left;
+}
+
+h1 {
+    color: #00274d;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.problem-list p {
+    font-size: 1.5em;
+    color: #00509e;
+    margin: 15px 0;
+}
+
+.emoji {
+    margin: 20px 0;
+}
+
+.sad-emoji {
+    width: 100px;
+    height: 100px;
+}
+
+/* 右边部分：选项样式 */
+.right-section {
+    width: 50%; /* 让右边部分占据剩余空间 */
+    text-align: left; /* 左对齐选项文本 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+}
+
+.right-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #00509e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+ul li a:hover {
+    background-color: #003366;
+    transform: scale(1.1); /* 悬停时放大 */
+}
