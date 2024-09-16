@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* 浅蓝色背景 */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+/* 逐渐浮现的文字 */
+.fade-in-text {
+    font-size: 2em;
+    color: #00509e;
+    opacity: 0;
+    animation: fadeIn 5s ease forwards; /* 5秒内逐渐浮现 */
+    line-height: 1.5em;
+}
+
+/* 特定单词的样式 */
+.highlight {
+    color: #ff4500;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.highlight:hover {
+    transform: scale(1.2); /* 鼠标悬停时放大 */
+    color: #ff6347; /* 悬停时颜色变化 */
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
