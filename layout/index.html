@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girls Who Code</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Girls Who Code</h1>
+  </header>
+
+  <div class="container">
+    <!-- 左侧学习案例 -->
+    <section class="learning-examples">
+      <h2>Learning Examples</h2>
+      <div class="examples-grid">
+        <div class="example-item">
+          <p>A 13-year-old girl used coding to create a birthday gift</p>
+        </div>
+        <div class="example-item">
+          <p>A 50-year-old woman used coding to make a living by building front-end websites</p>
+        </div>
+        <div class="example-item">
+          <p>A 23-year-old female student enhanced her competitiveness by learning web development</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 右侧学习导航 -->
+    <section class="learning-navigation">
+      <h2>Learning Navigation</h2>
+      <div class="navigation-grid">
+        <div class="nav-item">Float Layouts</div>
+        <div class="nav-item">Flexbox Alignments</div>
+        <div class="nav-item">Grid Basics</div>
+        <div class="nav-item">CSS Selectors</div>
+        <div class="nav-item">Box Model</div>
+        <div class="nav-item">Responsive Design</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 学习故事区域，带有滚动文字效果 -->
+  <section class="learning-story">
+    <h2>Learning Story</h2>
+    <div class="scrolling-text">
+      <p>
+        Our journey in coding started with learning how to structure and style a webpage. Understanding float, flexbox, and grid helped us create flexible layouts that work across devices. This is our story of how we explored new technologies, solved real-world problems, and developed essential coding skills to make a difference in our communities. We built websites, crafted applications, and created solutions that impacted not just ourselves, but everyone around us. Coding has empowered us to think creatively, solve complex problems, and continue pushing boundaries as women in tech.
+      </p>
+    </div>
+  </section>
+
+  <!-- 引入 JavaScript 实现文字缓慢滚动 -->
+  <script>
+    const scrollContainer = document.querySelector('.scrolling-text');
+    let scrollAmount = 0;
+
+    function scrollText() {
+      scrollAmount += 1; // 控制滚动速度
+      scrollContainer.scrollTop = scrollAmount;
+      if (scrollContainer.scrollTop >= scrollContainer.scrollHeight) {
+        scrollAmount = 0; // 重置滚动
+      }
+      requestAnimationFrame(scrollText); // 使用动画帧平滑滚动
+    }
+
+    scrollText(); // 启动文字滚动
+  </script>
+
+</body>
+</html>

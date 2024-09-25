@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9e5e8;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #ff7f9b;
+  font-size: 2.5rem;
+}
+
+/* 主容器，使用 Flexbox 实现左右布局 */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+section {
+  width: 48%;
+  text-align: justify; /* 实现两端对齐 */
+}
+
+h2 {
+  color: #ff6f91;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 学习示例区域，表格样式，白色单元格背景 */
+.learning-examples {
+  margin-bottom: 40px;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.example-item {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.example-item:hover {
+  transform: scale(1.05);
+}
+
+/* 学习导航 */
+.learning-navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.nav-item {
+  background-color: #fff;
+  color: #ff6f91;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: scale(1.05);
+}
+
+/* 学习故事滚动文字区域 */
+.learning-story {
+  margin-top: 40px;
+}
+
+.scrolling-text {
+  height: 150px; /* 设置固定高度，使文字可以滚动 */
+  overflow: hidden; /* 隐藏溢出部分 */
+  text-align: justify; /* 两端对齐 */
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.2rem;
+}
