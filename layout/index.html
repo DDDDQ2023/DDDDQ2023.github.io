@@ -5,6 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Girls Who Code</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .learning-examples, .learning-navigation {
+      width: 45%;
+    }
+
+    /* 设置两端对齐样式 */
+    .learning-story {
+      padding: 20px;
+      text-align: justify;
+      width: 100%; /* 使该部分占据整个页面宽度 */
+    }
+
+    .scrolling-text {
+      overflow: hidden;
+      height: 150px; /* 调整滚动区域的高度 */
+      line-height: 1.6; /* 设置行高，保证内容间距合适 */
+    }
+
+    /* 滚动效果的容器 */
+    .scrolling-text p {
+      animation: scroll 30s linear infinite; /* 调整滚动速度 */
+      margin: 0;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
