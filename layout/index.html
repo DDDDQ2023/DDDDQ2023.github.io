@@ -18,32 +18,41 @@
       background-color: #f0f0f0;
     }
 
+    /* 使用float布局 */
     .container {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
+      overflow: hidden; /* 清除浮动 */
     }
 
-    .learning-examples, .learning-navigation {
+    .learning-examples {
+      float: left;
       width: 45%;
+      padding: 20px;
     }
 
-   
-    .learning-story {
+    .learning-navigation {
+      float: right;
+      width: 45%;
       padding: 20px;
-      text-align: justify;
-      width: 100%; 
+    }
+
+    /* 设置Learning Story的样式 */
+    .learning-story {
+      clear: both; /* 清除浮动，确保内容不会被覆盖 */
+      padding: 20px;
+      width: 90%; /* 保持文字居中 */
+      margin: 0 auto;
+      text-align: left; /* 确保左对齐 */
     }
 
     .scrolling-text {
       overflow: hidden;
-      height: 150px; 
-      line-height: 1.6; 
+      height: 150px; /* 控制滚动区域的高度，增加可视区域 */
+      line-height: 1.6; /* 设置行高，确保内容间距合理 */
     }
 
-   
+    /* 滚动效果的容器 */
     .scrolling-text p {
-      animation: scroll 30s linear infinite; 
+      animation: scroll 30s linear infinite; /* 调整滚动速度，使内容滚动更平滑 */
       margin: 0;
     }
 
@@ -63,7 +72,7 @@
   </header>
 
   <div class="container">
-    <!-- example -->
+    <!-- 左侧学习案例 -->
     <section class="learning-examples">
       <h2>Learning Examples</h2>
       <div class="examples-grid">
@@ -79,7 +88,7 @@
       </div>
     </section>
 
-    <!-- navigation -->
+    <!-- 右侧学习导航 -->
     <section class="learning-navigation">
       <h2>Learning Navigation</h2>
       <div class="navigation-grid">
@@ -93,7 +102,7 @@
     </section>
   </div>
 
-  <!-- story -->
+  <!-- 学习故事区域，带有滚动文字效果 -->
   <section class="learning-story">
     <h2>Learning Story</h2>
     <div class="scrolling-text">
@@ -103,21 +112,21 @@
     </div>
   </section>
 
-  <!-- java -->
+  <!-- 引入 JavaScript 实现文字缓慢滚动 -->
   <script>
     const scrollContainer = document.querySelector('.scrolling-text');
     let scrollAmount = 0;
 
     function scrollText() {
-      scrollAmount += 1; 
+      scrollAmount += 1; // 控制滚动速度
       scrollContainer.scrollTop = scrollAmount;
       if (scrollContainer.scrollTop >= scrollContainer.scrollHeight) {
-        scrollAmount = 0; 
+        scrollAmount = 0; // 重置滚动
       }
-      requestAnimationFrame(scrollText); 
+      requestAnimationFrame(scrollText); // 使用动画帧平滑滚动
     }
 
-    scrollText(); 
+    scrollText(); // 启动文字滚动
   </script>
 
 </body>
