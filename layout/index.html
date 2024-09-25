@@ -28,22 +28,22 @@
       width: 45%;
     }
 
-    /* 设置两端对齐样式 */
+   
     .learning-story {
       padding: 20px;
       text-align: justify;
-      width: 100%; /* 使该部分占据整个页面宽度 */
+      width: 100%; 
     }
 
     .scrolling-text {
       overflow: hidden;
-      height: 150px; /* 调整滚动区域的高度 */
-      line-height: 1.6; /* 设置行高，保证内容间距合适 */
+      height: 150px; 
+      line-height: 1.6; 
     }
 
-    /* 滚动效果的容器 */
+   
     .scrolling-text p {
-      animation: scroll 30s linear infinite; /* 调整滚动速度 */
+      animation: scroll 30s linear infinite; 
       margin: 0;
     }
 
@@ -63,7 +63,7 @@
   </header>
 
   <div class="container">
-    <!-- 左侧学习案例 -->
+    <!-- example -->
     <section class="learning-examples">
       <h2>Learning Examples</h2>
       <div class="examples-grid">
@@ -79,7 +79,7 @@
       </div>
     </section>
 
-    <!-- 右侧学习导航 -->
+    <!-- navigation -->
     <section class="learning-navigation">
       <h2>Learning Navigation</h2>
       <div class="navigation-grid">
@@ -93,7 +93,7 @@
     </section>
   </div>
 
-  <!-- 学习故事区域，带有滚动文字效果 -->
+  <!-- story -->
   <section class="learning-story">
     <h2>Learning Story</h2>
     <div class="scrolling-text">
@@ -103,21 +103,21 @@
     </div>
   </section>
 
-  <!-- 引入 JavaScript 实现文字缓慢滚动 -->
+  <!-- java -->
   <script>
     const scrollContainer = document.querySelector('.scrolling-text');
     let scrollAmount = 0;
 
     function scrollText() {
-      scrollAmount += 1; // 控制滚动速度
+      scrollAmount += 1; 
       scrollContainer.scrollTop = scrollAmount;
       if (scrollContainer.scrollTop >= scrollContainer.scrollHeight) {
-        scrollAmount = 0; // 重置滚动
+        scrollAmount = 0; 
       }
-      requestAnimationFrame(scrollText); // 使用动画帧平滑滚动
+      requestAnimationFrame(scrollText); 
     }
 
-    scrollText(); // 启动文字滚动
+    scrollText(); 
   </script>
 
 </body>
