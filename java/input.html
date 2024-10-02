@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Input</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <h2>Enter Information for Both People</h2>
+    <div class="form-container">
+        <div class="form-left">
+            <h3>Person 1</h3>
+            <form id="form1">
+                <table>
+                    <tr>
+                        <td><label for="name1">Name:</label></td>
+                        <td><input type="text" id="name1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="birthday1">Birthday:</label></td>
+                        <td><input type="date" id="birthday1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender1">Gender:</label></td>
+                        <td>
+                            <select id="gender1">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="color1">Favorite Color:</label></td>
+                        <td><input type="text" id="color1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mbti1">MBTI:</label></td>
+                        <td><input type="text" id="mbti1"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="form-right">
+            <h3>Person 2</h3>
+            <form id="form2">
+                <table>
+                    <tr>
+                        <td><label for="name2">Name:</label></td>
+                        <td><input type="text" id="name2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="birthday2">Birthday:</label></td>
+                        <td><input type="date" id="birthday2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender2">Gender:</label></td>
+                        <td>
+                            <select id="gender2">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="color2">Favorite Color:</label></td>
+                        <td><input type="text" id="color2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mbti2">MBTI:</label></td>
+                        <td><input type="text" id="mbti2"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <button class="submit-btn" onclick="submitForm()">Submit</button>
+
+    <script>
+        function submitForm() {
+            const person1 = {
+                name: document.getElementById('name1').value,
+                birthday: document.getElementById('birthday1').value,
+                gender: document.getElementById('gender1').value,
+                color: document.getElementById('color1').value,
+                mbti: document.getElementById('mbti1').value
+            };
+            const person2 = {
+                name: document.getElementById('name2').value,
+                birthday: document.getElementById('birthday2').value,
+                gender: document.getElementById('gender2').value,
+                color: document.getElementById('color2').value,
+                mbti: document.getElementById('mbti2').value
+            };
+            
+            localStorage.setItem("person1", JSON.stringify(person1));
+            localStorage.setItem("person2", JSON.stringify(person2));
+
+            // 生成爱心烟花动画
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 1500);  // 动画完成后移除
+
+            setTimeout(() => {
+                window.location.href = "output.html";
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

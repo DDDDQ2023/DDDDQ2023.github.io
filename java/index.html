@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidal Power - Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">Tidal Power</div>
+
+    <!-- Attractiveness Calculator -->
+    <div class="attractiveness-calc">
+      <h2>Attractiveness Calculator</h2>
+      <table>
+        <tr>
+          <td colspan="3" id="attractiveness-output">Index: --</td>
+        </tr>
+        <tr>
+          <td>Time:</td>
+          <td>Location:</td>
+          <td>Calculate:</td>
+        </tr>
+        <tr>
+          <td><span id="time">Loading...</span></td>
+          <td><span id="location">Loading...</span></td>
+          <td><button class="calculate-btn" onclick="calculateAttractiveness()">Calculate</button></td>
+        </tr>
+      </table>
+      <p class="instructor">Instructor: <em>This calculator can calculate your attraction index, something like fortune at the moment, based on your geographical location and the current time.</em></p>
+    </div>
+    
+    <!-- 左右布局部分 -->
+    <div class="test-more-section">
+      <div class="left-section">
+        <div class="animated-text">Want to test more?</div>
+      </div>
+      <div class="right-section">
+        <div class="fortune-container">
+          <button class="fortune-btn" onclick="showCard('zodiac')">
+            Zodiac fortune <span class="triangle-right"></span>
+          </button>
+          <img id="zodiac-img" src="images/zodiac-card.png" alt="Zodiac" style="display:none;">
+        </div>
+
+        <div class="fortune-container">
+          <button class="fortune-btn" onclick="showCard('fate')">
+            Four Pillars of Destiny <span class="triangle-right"></span>
+          </button>
+          <img id="fate-img" src="images/fate-card.png" alt="Fate" style="display:none;">
+        </div>
+
+        <div class="fortune-container">
+          <button class="fortune-btn" onclick="showCard('tarot')">
+            Tarot divination <span class="triangle-right"></span>
+          </button>
+          <img id="tarot-img" src="images/tarot-card.png" alt="Tarot" style="display:none;">
+        </div>
+      </div>
+    </div>
+
+    <!-- 巨大的Continue按钮 -->
+    <button class="continue-btn-large" onclick="window.location.href='input.html'">Continue...</button>
+  </div>
+
+  <script>
+    function calculateAttractiveness() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          const date = new Date();
+          const time = date.toLocaleTimeString();
+          const attractivenessIndex = Math.floor(Math.random() * 100);
+          
+          document.getElementById('attractiveness-output').textContent = `Index: ${attractivenessIndex}`;
+          document.getElementById('time').textContent = time;
+          document.getElementById('location').textContent = `(${latitude.toFixed(2)}, ${longitude.toFixed(2)})`;
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    function showCard(type) {
+      // 隐藏所有图片
+      document.getElementById('zodiac-img').style.display = 'none';
+      document.getElementById('fate-img').style.display = 'none';
+      document.getElementById('tarot-img').style.display = 'none';
+      
+      // 显示点击的图片
+      if (type === 'zodiac') {
+        document.getElementById('zodiac-img').style.display = 'inline-block';
+      } else if (type === 'fate') {
+        document.getElementById('fate-img').style.display = 'inline-block';
+      } else if (type === 'tarot') {
+        document.getElementById('tarot-img').style.display = 'inline-block';
+      }
+    }
+  </script>
+ <audio id="background-music" loop>
+    <source src="videos/bg.m4a" type="audio/mpeg">
+</audio>
+
+<script>
+    document.addEventListener('click', function() {
+        var audio = document.getElementById('background-music');
+        audio.play();
+    });
+</script>
+
+
+<script>
+    document.getElementById('videos/bg.m4a').oncanplay = function() {
+        this.play();
+    };
+</script>
+</body>
+</html>

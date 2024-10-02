@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibility Score</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="compatibility-container">
+        <h2>Your Compatibility Result</h2>
+        <table class="compatibility-table">
+            <tr>
+                <td id="result">Calculating...</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        const person1 = JSON.parse(localStorage.getItem("person1"));
+        const person2 = JSON.parse(localStorage.getItem("person2"));
+
+        function calculateCompatibility() {
+            let compatibility = 0;
+            // Simple compatibility logic
+            if (person1.gender !== person2.gender) compatibility += 20;
+            if (person1.color === person2.color) compatibility += 30;
+            if (person1.mbti === person2.mbti) compatibility += 50;
+            return compatibility;
+        }
+
+        // Display the compatibility result
+        document.getElementById('result').innerHTML = `
+            <p>${person1.name} and ${person2.name}, your compatibility score is: ${calculateCompatibility()}%</p>
+        `;
+    </script>
+</body>
+</html>
