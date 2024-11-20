@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immersive News</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Immersive News</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#local-vs-global">Local vs Global</a></li>
+        <li><a href="#opinion-leaders">Opinion Leaders</a></li>
+        <li><a href="#sentiment-analysis">Sentiment Analysis</a></li>
+      </ul>
+      <div class="timer">
+        <span id="timer">00:00:00</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Local vs Global News -->
+    <section id="local-vs-global" class="immersive-section">
+      <h1>Local News vs Global News</h1>
+      <div class="news-container">
+        <div class="local-news">
+          <h2>Local News</h2>
+          <ul id="local-news-list">
+            <li>Local News Item 1</li>
+            <li>Local News Item 2</li>
+          </ul>
+        </div>
+        <div class="global-news">
+          <h2>Global News</h2>
+          <ul id="global-news-list">
+            <li>Global News Item 1</li>
+            <li>Global News Item 2</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Opinion Leaders -->
+    <section id="opinion-leaders" class="immersive-section">
+      <h1>Opinion Leaders</h1>
+      <div class="opinion-container">
+        <div class="opinion">
+          <h3>Leader 1</h3>
+          <p>Insightful commentary or quote from Leader 1.</p>
+        </div>
+        <div class="opinion">
+          <h3>Leader 2</h3>
+          <p>Insightful commentary or quote from Leader 2.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sentiment Analysis -->
+    <section id="sentiment-analysis" class="immersive-section">
+      <h1>Sentiment Analysis</h1>
+      <div class="sentiment-container">
+        <div class="sentiment positive">
+          <h2>Positive</h2>
+          <ul>
+            <li>Positive News Item 1</li>
+            <li>Positive News Item 2</li>
+          </ul>
+        </div>
+        <div class="sentiment neutral">
+          <h2>Neutral</h2>
+          <ul>
+            <li>Neutral News Item 1</li>
+            <li>Neutral News Item 2</li>
+          </ul>
+        </div>
+        <div class="sentiment negative">
+          <h2>Negative</h2>
+          <ul>
+            <li>Negative News Item 1</li>
+            <li>Negative News Item 2</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sentiment Analysis -->
+    <section id="news-categories" class="immersive-section">
+        <h1>News Categories</h1>
+        <div class="categories-container">
+          <div class="category-card" data-category="politics">Politics</div>
+          <div class="category-card" data-category="economy">Economy</div>
+          <div class="category-card" data-category="military">Military</div>
+          <div class="category-card" data-category="culture">Culture</div>
+        </div>
+      </section>
+
+    <section id="reading-analysis" class="immersive-section">
+        <h1>Personal News Reading Analysis</h1>
+        <div class="analysis-container">
+          <div class="analysis-card">
+            <h2>Politics</h2>
+            <p>Time Spent: <span id="time-politics">0s</span></p>
+            <p>Emotional Time: <span id="emotion-politics">0s</span></p>
+            <p>Opinion Time: <span id="opinion-politics">0s</span></p>
+          </div>
+          <div class="analysis-card">
+            <h2>Economy</h2>
+            <p>Time Spent: <span id="time-economy">0s</span></p>
+            <p>Emotional Time: <span id="emotion-economy">0s</span></p>
+            <p>Opinion Time: <span id="opinion-economy">0s</span></p>
+          </div>
+          <div class="analysis-card">
+            <h2>Military</h2>
+            <p>Time Spent: <span id="time-military">0s</span></p>
+            <p>Emotional Time: <span id="emotion-military">0s</span></p>
+            <p>Opinion Time: <span id="opinion-military">0s</span></p>
+          </div>
+          <div class="analysis-card">
+            <h2>Culture</h2>
+            <p>Time Spent: <span id="time-culture">0s</span></p>
+            <p>Emotional Time: <span id="emotion-culture">0s</span></p>
+            <p>Opinion Time: <span id="opinion-culture">0s</span></p>
+          </div>
+        </div>
+    </section>
+      
+ </main>
+
+  <footer>
+    <p>© 2024 Immersive News. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
