@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情感分类新闻门户</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>情感分类新闻门户</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="filterNews('positive')">积极</a></li>
+            <li><a href="#" onclick="filterNews('neutral')">中性</a></li>
+            <li><a href="#" onclick="filterNews('negative')">消极</a></li>
+        </ul>
+    </nav>
+    <main id="news-container">
+        <!-- 新闻内容将通过JavaScript动态加载 -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

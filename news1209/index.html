@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="navbar">
+        <div class="logo">EmotionalNews</div>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <div class="user-options">
+            <a href="#">Login</a> | <a href="#">Register</a>
+        </div>
+    </header>
+
+    <!-- 主视觉区 -->
+    <section class="hero-section">
+        <img src="hero-image.jpg" alt="Hero Image" class="hero-image">
+        <h1 class="hero-title">Explore the Emotional Stories that Shape Our World</h1>
+    </section>
+
+    <!-- 页面主体 -->
+    <main class="main-content">
+        <!-- 左侧情绪分类导航 -->
+        <aside class="emotion-menu">
+            <ul>
+                <li class="emotion-option">😊 Hopeful</li>
+                <li class="emotion-option">😢 Tragic</li>
+                <li class="emotion-option">💪 Inspirational</li>
+                <li class="emotion-option">😲 Shocking</li>
+            </ul>
+        </aside>
+
+        <!-- 中心时间线 -->
+        <section class="timeline">
+            <article class="news-card">
+                <img src="news1.jpg" alt="News 1">
+                <h3>Headline 1</h3>
+                <p>Short description of the story...</p>
+            </article>
+            <article class="news-card">
+                <img src="news2.jpg" alt="News 2">
+                <h3>Headline 2</h3>
+                <p>Short description of the story...</p>
+            </article>
+            <!-- 更多新闻卡片 -->
+        </section>
+
+        <!-- 右侧情绪过滤器 -->
+        <aside class="emotion-filter">
+            <h3>Filter by Emotion</h3>
+            <input type="range" class="mood-slider" min="1" max="10" value="5">
+        </aside>
+    </main>
+
+    <!-- 底部动态评论区 -->
+    <footer class="footer">
+        <section class="comments-section">
+            <h3>User Comments</h3>
+            <p><strong>User 1:</strong> Amazing story! 😊</p>
+            <p><strong>User 2:</strong> This made me cry. 😢</p>
+        </section>
+        <section class="sentiment-analysis">
+            <h3>Sentiment Analysis</h3>
+            <img src="sentiment-chart.jpg" alt="Sentiment Chart">
+        </section>
+    </footer>
+</body>
+</html>

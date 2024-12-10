@@ -1,0 +1,210 @@
+/* 平滑滚动效果 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 通用样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* 导航栏 */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd; /* 添加下边框 */
+}
+
+/* 导航栏中的内容 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px; /* 增大字体 */
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px; /* 调整字母间距 */
+}
+
+nav .logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* 导航栏链接容器 */
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly; /* 均匀分布 */
+    flex-grow: 1;
+}
+
+/* 导航项 */
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+nav .nav-links li a:hover {
+    color: #fff;
+    background-color: #f39c12;
+    transform: scale(1.05);
+}
+
+/* 搜索框样式 */
+nav .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav .search-container input {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    width: 250px;
+}
+
+nav .search-container button {
+    background-color: #f39c12;
+    border: none;
+    padding: 8px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+nav .search-container button:hover {
+    background-color: #e67e22;
+}
+
+/* 页面内容样式 */
+#content {
+    padding: 20px;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* 小导航栏 */
+.category-nav, .timeline-nav, .emotion-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.category-nav li, .timeline-nav li, .emotion-nav li {
+    margin: 0 10px;
+}
+
+.category-nav li a, .timeline-nav li a, .emotion-nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.category-nav li a:hover, .timeline-nav li a:hover, .emotion-nav li a:hover {
+    color: #f39c12;
+}
+
+/* 情感和新闻部分 */
+#category-example, #timeline-example, #emotion-example {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* 报告部分 */
+#analysis-report {
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* 响应式设计：在屏幕宽度较小时修改布局 */
+@media (max-width: 768px) {
+    /* 导航栏 */
+    nav {
+        flex-direction: column; /* 垂直排列 */
+        align-items: flex-start;
+    }
+
+    nav .logo {
+        font-size: 24px; /* 小屏幕下减少字体大小 */
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        align-items: flex-start;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    nav .nav-links li a {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    /* 搜索框 */
+    nav .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav .search-container input {
+        width: 100%;
+    }
+
+    nav .search-container button {
+        width: 100%;
+    }
+}

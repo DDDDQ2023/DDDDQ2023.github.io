@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE NEWS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+  <nav>
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo"> 
+            <span class="website-name">The NEWs</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="emotion.html">Emotion</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+        </ul>
+         <!-- 搜索框 -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search news...">
+            <button onclick="searchNews()">Search</button>
+        </div>
+    </nav>
+
+    <!-- 页面内容部分 -->
+    <div id="content">
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to THE NEWS website. Here you can find the latest and most relevant news categorized by different topics, timelines, and emotional preferences.</p>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories">
+            <h2>Categories</h2>
+            <p>Choose from the following categories to explore news:</p>
+            <ul class="category-nav">
+                <li><a href="#" onclick="loadCategory('business')">Business</a></li>
+                <li><a href="#" onclick="loadCategory('entertainment')">Entertainment</a></li>
+                <li><a href="#" onclick="loadCategory('health')">Health</a></li>
+                <li><a href="#" onclick="loadCategory('science')">Science</a></li>
+                <li><a href="#" onclick="loadCategory('sports')">Sports</a></li>
+                <li><a href="#" onclick="loadCategory('technology')">Technology</a></li>
+            </ul>
+            <div id="category-example"></div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline">
+            <h2>Timeline</h2>
+            <p>Get news based on different time periods: 1 hour, 1 day, 1 week, or 1 month.</p>
+            <ul class="timeline-nav">
+                <li><a href="#" onclick="loadTimelineNews('hour')">Last Hour</a></li>
+                <li><a href="#" onclick="loadTimelineNews('day')">Last Day</a></li>
+                <li><a href="#" onclick="loadTimelineNews('week')">Last Week</a></li>
+                <li><a href="#" onclick="loadTimelineNews('month')">Last Month</a></li>
+            </ul>
+            <div id="timeline-example"></div>
+        </section>
+
+        <!-- Emotion Section -->
+        <section id="emotion">
+            <h2>Emotion</h2>
+            <p>Choose your mood today and explore news based on it:</p>
+            <ul class="emotion-nav">
+                <li><a href="#" onclick="loadEmotionNews('joy')">Joy</a></li>
+                <li><a href="#" onclick="loadEmotionNews('anger')">Anger</a></li>
+                <li><a href="#" onclick="loadEmotionNews('fear')">Fear</a></li>
+                <li><a href="#" onclick="loadEmotionNews('sadness')">Sadness</a></li>
+                <li><a href="#" onclick="loadEmotionNews('surprise')">Surprise</a></li>
+            </ul>
+            <div id="emotion-example"></div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section id="analysis">
+            <h2>Analysis</h2>
+            <p>Here’s a report of your reading habits:</p>
+            <div id="analysis-report"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

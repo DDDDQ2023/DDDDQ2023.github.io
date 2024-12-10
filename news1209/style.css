@@ -1,0 +1,130 @@
+/* 通用设置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* 顶部导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 5px;
+    width: 50%;
+}
+
+.user-options a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* 主视觉区 */
+.hero-section {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* 主体布局 */
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+/* 左侧情绪分类 */
+.emotion-menu {
+    width: 20%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-option {
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* 中心时间线 */
+.timeline {
+    width: 50%;
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+}
+
+.news-card {
+    width: 200px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* 右侧情绪过滤器 */
+.emotion-filter {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.mood-slider {
+    width: 80%;
+    margin: 20px 0;
+}
+
+/* 底部动态评论区 */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.comments-section,
+.sentiment-analysis {
+    width: 45%;
+}
+
+.comments-section h3,
+.sentiment-analysis h3 {
+    margin-bottom: 10px;
+}

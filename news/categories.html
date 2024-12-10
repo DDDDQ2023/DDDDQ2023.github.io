@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - THE NEWS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo"> 
+            <span class="website-name">The NEWs</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="emotion.html">Emotion</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search news...">
+            <button onclick="searchNews()">Search</button>
+        </div>
+    </nav>
+
+    <!-- Categories 页面内容 -->
+    <div id="content">
+        <section id="categories">
+            <h2>News Categories</h2>
+            <p>Choose from the following categories to explore news:</p>
+
+            <!-- Health Section -->
+            <div class="category-section" id="health-section">
+                <h3>Health</h3>
+                <div id="health-news"></div>
+            </div>
+
+            <!-- Sports Section -->
+            <div class="category-section" id="sports-section">
+                <h3>Sports</h3>
+                <div id="sports-news"></div>
+            </div>
+
+            <!-- Add other categories as needed -->
+            <div class="category-section" id="entertainment-section">
+                <h3>Entertainment</h3>
+                <div id="entertainment-news"></div>
+            </div>
+
+            <div class="category-section" id="technology-section">
+                <h3>Technology</h3>
+                <div id="technology-news"></div>
+            </div>
+
+            <div class="category-section" id="business-section">
+                <h3>Business</h3>
+                <div id="business-news"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="category.js"></script>
+</body>
+</html>

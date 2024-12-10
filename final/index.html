@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="home_con1">
+    <div class="home_con1_title1">We recommend you <span>have more comprehensive news </span>
+    </div>
+    <div class="home_con1_title2">We will give you <span>General/Business/Entertainment/Health/Science/Sports/Technology  news as you want</span>
+    </div>
+    <div class="home_con1_img">
+        <div class="con1_img_title">And choose what style you want</div>
+        <div class="con1_img_list">
+            <div class="mood"><img src="image/img1.png"/></div>
+            <div class="mood"><img src="image/img2.png"/></div>
+            <div class="mood"><img src="image/img3.png"/></div>
+        </div>
+    </div>
+</div>
+<script>
+    let moodAll = document.querySelectorAll('.mood')
+    for (let i = 0; i < moodAll.length; i++) {
+        moodAll[i].onclick = function () {
+            localStorage.setItem('mood', i + 1)
+            location.href = './list.html'
+        }
+    }
+</script>
+</body>
+</html>
